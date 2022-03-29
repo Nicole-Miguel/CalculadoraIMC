@@ -21,6 +21,21 @@ namespace CalculadoraIMC
 
             Console.WriteLine("Seu IMC é {0}", imc);
 
+            if(imc < 17.00) {
+                Console.WriteLine("Muito abaixo do peso");
+            } else if(imc >= 17.00 && imc < 18.50) {
+                Console.WriteLine("Abaixo do peso");
+            } else if(imc >= 18.50 && imc < 25.00) {
+                Console.WriteLine("Peso normal");
+            } else  if(imc >= 25.00 && imc < 30.00) {
+                Console.WriteLine("Acima do peso");
+            } else if(imc >= 30.00 && imc < 35.00) {
+                Console.WriteLine("Obesidade I");
+            } else if(imc >= 35.00 && imc < 40) {
+                Console.WriteLine("Obesidade II (severa");
+            } else {
+                Console.WriteLine("Obesidade III (mórbida");
+            }
 
         }
     }

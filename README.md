@@ -5,6 +5,7 @@ Aplicação dotnet console para cálculo do IMC
 ## Funcionalidades
 
 - Calcula o IMC
+- Exibe a faixa de peso
 
 ## Tecnologia
 
