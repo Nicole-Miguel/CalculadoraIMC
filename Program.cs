@@ -6,45 +6,20 @@ namespace CalculadoraIMC
     {
         static void Main(string[] args)
         {
+            Individuo pessoa1 = new Individuo();
+
             Console.WriteLine("Qual o seu nome?");
-            string nome = Console.ReadLine();
+            pessoa1.Nome = Console.ReadLine();
 
             Console.WriteLine("Qual a sua altura em metros? Ex: 1,63");
-            float altura = Convert.ToSingle(Console.ReadLine());
+            pessoa1.Altura = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Qual o seu peso em kg? Ex: 59,3");
-            float peso = Convert.ToSingle(Console.ReadLine());
+            pessoa1.Peso = Convert.ToDouble(Console.ReadLine());
 
-            double imc = peso / (altura * altura);
+            Console.WriteLine("{0} sua altura é {1} e seu peso é {2}.", pessoa1.Nome, pessoa1.Altura, pessoa1.Peso);  
+            Console.WriteLine ("Seu IMC é {0}·", pessoa1.CalculoImc());  
 
-            Console.WriteLine("{0} sua altura é {1} e seu peso é {2}", nome, altura, peso);
-
-            Console.WriteLine("Seu IMC é {0}", imc);
-
-            if(imc < 17.00) {
-                Console.WriteLine("Muito abaixo do peso");
-            } else if(imc >= 17.00 && imc < 18.50) {
-                Console.WriteLine("Abaixo do peso");
-            } else if(imc >= 18.50 && imc < 25.00) {
-                Console.WriteLine("Peso normal");
-            } else  if(imc >= 25.00 && imc < 30.00) {
-                Console.WriteLine("Acima do peso");
-            } else if(imc >= 30.00 && imc < 35.00) {
-                Console.WriteLine("Obesidade I");
-            } else if(imc >= 35.00 && imc < 40) {
-                Console.WriteLine("Obesidade II (severa");
-            } else {
-                Console.WriteLine("Obesidade III (mórbida");
-            }
-
-            double pesoIdeal = 0;
-            if(imc >= 25){
-                pesoIdeal = 24.99 * (altura * altura);
-                Console.WriteLine("Você precisa perder {0} kg para chegar no peso ideal.", peso - pesoIdeal);
-            } else if (imc <= 17 && imc < 18.50) {
-                pesoIdeal = 18.50 * (altura * altura);
-                Console.WriteLine("Você precisa ganhar {0} kg para chegar no peso ideal.", pesoIdeal - peso);
-            }
         }
     }
 }
