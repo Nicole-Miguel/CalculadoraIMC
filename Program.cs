@@ -18,8 +18,14 @@ namespace CalculadoraIMC
             pessoa1.Peso = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("{0} sua altura é {1} e seu peso é {2}.", pessoa1.Nome, pessoa1.Altura, pessoa1.Peso);  
-            Console.WriteLine ("Seu IMC é {0}·", pessoa1.CalculoImc());  
+            Console.WriteLine("Seu IMC é {0}·", pessoa1.CalculoImc());  
 
+            Console.WriteLine("{0}", pessoa1.FaixaDePeso());
+
+            Console.WriteLine("Seu peso ideal é: {0}", pessoa1.PesoIdeal());
+            
+            
         }
+        
     }
 }
